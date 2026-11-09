@@ -7,6 +7,14 @@ Sem dependências de runtime, sem framework, sem etapa de build obrigatória.
 > ⚠️ **Status:** projeto em planejamento. O Quake Byte TSC é um **conceito**, antes da prototipagem.
 > Nenhum produto, data, certificação, parceiro ou depoimento foi publicado — por design.
 
+## Preview da página inicial
+
+![Preview da página inicial japonesa da Byte TSC, com o projeto Quake Byte TSC em destaque](docs/homepage-preview.png)
+
+Captura real da primeira dobra de `/` (japonês), em viewport desktop de **1440 × 1000 px**, gerada com Chrome Headless. É uma preview estática; o site ainda não foi publicado.
+
+[Ver imagem em tamanho original](docs/homepage-preview.png).
+
 ## Estrutura
 
 ```
