@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Sitemap is added only after the deployment URL is confirmed.

@@ -1,0 +1,22 @@
+{
+  "name": "Byte TSC",
+  "short_name": "Byte TSC",
+  "description": "Quake Byte TSC — earthquake information in a language you understand. ja · en · pt",
+  "lang": "ja",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#10305c",
+  "background_color": "#f7f8fa",
+  "display": "browser"
+}
