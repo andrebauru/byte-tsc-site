@@ -1,4 +1,4 @@
-/* Byte TSC — language handling + mobile menu.
+/* RBM — language handling + mobile menu.
  * No dependencies. Progressive enhancement: the site works fully
  * without JS; this script only adds language auto-detection on the
  * root page, manual preference persistence, anchor-preserving language
@@ -10,7 +10,8 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "bytetsc-pref-lang";
+  var STORAGE_KEY = "rbm-pref-lang";
+  var LEGACY_STORAGE_KEY = "bytetsc-pref-lang";
   var SUPPORTED = ["ja", "en", "pt"];
   var ROOT_FALLBACK = "ja";
 
@@ -46,7 +47,13 @@
   function readSaved() {
     try {
       var v = window.localStorage.getItem(STORAGE_KEY);
-      return SUPPORTED.indexOf(v) !== -1 ? v : null;
+      if (SUPPORTED.indexOf(v) !== -1) { return v; }
+      var legacy = window.localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (SUPPORTED.indexOf(legacy) !== -1) {
+        savePref(legacy);
+        return legacy;
+      }
+      return null;
     } catch (e) { return null; }
   }
   function savePref(lang) {
@@ -133,6 +140,6 @@
   }
 
   /* Expose pure helper for in-browser debugging/tests. */
-  window.ByteTSC = window.ByteTSC || {};
-  window.ByteTSC.pickLanguage = pickLanguage;
+  window.RBM = window.RBM || {};
+  window.RBM.pickLanguage = pickLanguage;
 })();

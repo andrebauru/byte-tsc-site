@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate raster assets for the Byte TSC landing page.
+"""Generate raster assets for the RBM landing page.
 
 Run:    python3 scripts/make_raster_assets.py
 Needs:  Pillow (pip install pillow)
@@ -42,7 +42,7 @@ def rounded(draw, box, radius, fill):
 
 
 def draw_mark(size, base_color, bar_color, accent_color):
-    """Byte TSC symbol: rounded square + 8 vertical bars (a 'byte' as a waveform)."""
+    """RBM symbol: rounded square + vertical broadcast-wave bars."""
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     s = size / 64.0
@@ -102,15 +102,15 @@ def og_share():
         d.ellipse([cx, 343, cx + 14, 357], fill=(184, 196, 214))
     d.ellipse([895, 200, 909, 214], fill=AMBER)
 
-    # Byte TSC mark (left)
+    # RBM mark (left)
     mark = draw_mark(112, ICE, NAVY_DEEP, AMBER)  # dark mark on dark bg? use ICE base
     img.paste(mark, (96, 92), mark)
 
-    # wordmark: BYTE TSC
+    # wordmark: RBM
     f_big = find_font(64)
-    d.text((232, 112), "BYTE TSC", font=f_big, fill=ICE)
+    d.text((232, 112), "RBM", font=f_big, fill=ICE)
     f_small = find_font(30)
-    d.text((234, 192), "Quake Byte TSC", font=f_small, fill=(160, 180, 205))
+    d.text((234, 192), "Quake RBM", font=f_small, fill=(160, 180, 205))
     f_tag = find_font(26)
     d.text((97, 508), "ja · en · pt", font=f_tag, fill=(160, 180, 205))
 

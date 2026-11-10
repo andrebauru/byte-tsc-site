@@ -1,7 +1,7 @@
 {
-  "name": "Byte TSC",
-  "short_name": "Byte TSC",
-  "description": "Quake Byte TSC — earthquake information in a language you understand. ja · en · pt",
+  "name": "RBM",
+  "short_name": "RBM",
+  "description": "Quake RBM — earthquake information in a language you understand. ja · en · pt",
   "lang": "ja",
   "start_url": "/",
   "icons": [

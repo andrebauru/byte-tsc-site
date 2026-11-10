@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-# Sitemap is added only after the deployment URL is confirmed.
+
+Sitemap: https://financeself.jp/sitemap.xml
